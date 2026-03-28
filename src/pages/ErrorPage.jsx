@@ -1,8 +1,10 @@
 import React from "react";
+import Navbar from "../components/Navbar";
 
 const ErrorPage = () => {
   return (
     <div>
+      <Navbar></Navbar>
       <h1>page not found</h1>
     </div>
   );
