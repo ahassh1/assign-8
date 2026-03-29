@@ -47,7 +47,7 @@ const TotalHistory = () => {
       ([entry]) => {
         if (entry.isIntersecting) {
           setStartCounting(false);
-          setTimeout(() => setStartCounting(true), 50); // small delay to trigger count
+          setTimeout(() => setStartCounting(true), 50);
         }
       },
       { threshold: 0.3 },
