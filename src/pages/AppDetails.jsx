@@ -1,6 +1,7 @@
 import React from "react";
 import { useLoaderData, useParams } from "react-router";
 import { FaDownload, FaStar, FaRegHeart } from "react-icons/fa";
+import RatingsChart from "./RatingChart";
 
 const AppDetails = () => {
   const appsData = useLoaderData();
@@ -76,9 +77,11 @@ const AppDetails = () => {
             </button>
           </div>
         </div>
+        <div>
+          <RatingsChart ratings={app.ratings} />
+        </div>
       </div>
     </div>
   );
 };
-
 export default AppDetails;
