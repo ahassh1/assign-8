@@ -19,5 +19,11 @@ const saveToLocalStorage = (id) => {
   const installAppsStr = JSON.stringify(installApps);
   localStorage.setItem("installed", installAppsStr);
 };
+const removeFromLocalStorage = (id) => {
+  const installApps = getFromLocalStorage();
+  const newInstallApps = installApps.filter((appId) => appId !== id);
+  const installAppsStr = JSON.stringify(newInstallApps);
+  localStorage.setItem("installed", installAppsStr);
+};
 
-export { getFromLocalStorage, saveToLocalStorage };
+export { getFromLocalStorage, saveToLocalStorage, removeFromLocalStorage };

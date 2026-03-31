@@ -33,6 +33,7 @@ export const router = createBrowserRouter([
         path: "/installation",
         Component: Installation,
         HydrateFallback: Loader,
+        loader: () => fetch("/appsData.json"),
       },
       {
         path: "*",

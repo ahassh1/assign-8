@@ -6,7 +6,6 @@ import { useLoaderData } from "react-router";
 
 const Home = () => {
   const appsData = useLoaderData();
-  console.log(appsData);
   return (
     <>
       <Hero />
