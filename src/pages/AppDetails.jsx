@@ -12,6 +12,7 @@ const AppDetails = () => {
     if (num >= 1000) return (num / 1000).toFixed(0) + "k";
     return num.toString();
   };
+  const { description } = app;
 
   return (
     <div className="bg-gradient-to-b from-gray-100 to-gray-50 py-16 min-h-screen">
@@ -79,6 +80,17 @@ const AppDetails = () => {
         </div>
         <div>
           <RatingsChart ratings={app.ratings} />
+        </div>
+
+        <div className=" w-full mt-3 md:mt-6 w-11/12 mx-auto">
+          <h3 className="font-bold text-xl mb-6 text-gray-800">
+            Ratings Overview
+          </h3>
+          {description.map((descrip, index) => (
+            <p key={index} className="text-gray-500 inline-block">
+              {descrip}
+            </p>
+          ))}
         </div>
       </div>
     </div>

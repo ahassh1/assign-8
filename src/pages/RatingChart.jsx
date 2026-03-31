@@ -15,7 +15,7 @@ const RatingsChart = ({ ratings }) => {
   const barColors = ["#F97316", "#FB923C", "#FDBA74", "#FDE68A", "#34D399"];
 
   return (
-    <div className="p-6 w-full w-11/12 mx-auto">
+    <div className=" w-full mt-3 md:mt-6 w-11/12 mx-auto">
       <h3 className="font-bold text-xl mb-6 text-gray-800">Ratings Overview</h3>
 
       <ResponsiveContainer width="100%" height={350}>

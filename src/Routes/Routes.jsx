@@ -4,8 +4,8 @@ import Apps from "../pages/Apps";
 import MainLayout from "../layouts/MainLayout";
 import Installation from "../pages/Installation";
 import Loader from "../components/Loader";
-import AppCard from "../components/AppCard";
 import AppDetails from "../pages/AppDetails";
+import ErrorPage from "../pages/ErrorPage";
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -26,12 +26,17 @@ export const router = createBrowserRouter([
       {
         path: "/apps",
         Component: Apps,
+        loader: () => fetch("/appsData.json"),
         HydrateFallback: Loader,
       },
       {
         path: "/installation",
         Component: Installation,
         HydrateFallback: Loader,
+      },
+      {
+        path: "*",
+        Component: ErrorPage,
       },
     ],
   },
